@@ -1,12 +1,6 @@
 {
   "comments": [
     {
-      "id": 1,
-      "name": "hamid",
-      "email": "Eliseo@gardner.biz",
-      "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
-    },
-    {
       "id": 2,
       "name": "quo vero reiciendis velit similique earum",
       "email": "Jayne_Kuhic@sydney.com",
@@ -29,24 +23,6 @@
       "email": "fijudahede@mailinator.com",
       "body": "Quae rerum sequi eli",
       "id": 5
-    },
-    {
-      "name": "Mark Delaney",
-      "email": "rycyfik@mailinator.com",
-      "body": "Sed sed qui voluptat",
-      "id": 6
-    },
-    {
-      "name": "Ishmael Thomas",
-      "email": "koso@mailinator.com",
-      "body": "Eos incididunt verit",
-      "id": 7
-    },
-    {
-      "name": "Irma Johnson",
-      "email": "bupatajeh@mailinator.com",
-      "body": "In excepturi ut fuga",
-      "id": 8
     }
   ]
 }
