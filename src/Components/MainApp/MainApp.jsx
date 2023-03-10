@@ -56,7 +56,11 @@ const MainApp = () => {
                     <p>Loading ...</p>
                 )}
             </div>
-            <FullComment commentId={clickedComment} />
+            <FullComment
+                commentId={clickedComment}
+                setComments={setComments}
+                setClickedComment={setClickedComment}
+            />
             <AddComment addNew={hanlePostComment} />
         </div>
     );
