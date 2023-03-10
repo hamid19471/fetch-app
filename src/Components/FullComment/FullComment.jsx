@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-const FullComment = ({ commentId }) => {
+const FullComment = ({ commentId, setComments, setClickedComment }) => {
     const [comment, setComment] = useState([]);
 
     useEffect(() => {
@@ -17,6 +17,16 @@ const FullComment = ({ commentId }) => {
     };
 
     if (!commentId) return <p>Select Comment</p>;
+
+    const handleDeleteComment = async () => {
+        try {
+            await axios.delete(`http://localhost:3001/comments/${commentId}`);
+            const { data } = await axios.get("http://localhost:3001/comments/");
+            setComments(data);
+            setComment([]);
+            setClickedComment(null);
+        } catch (error) {}
+    };
 
     return (
         <div className="flex items-start justify-center bg-violet-500 my-9 rounded-xl">
@@ -41,6 +51,12 @@ const FullComment = ({ commentId }) => {
                     </p>
                     <p className="w-[900px] mx-auto">{comment.body}</p>
                 </div>
+                <button
+                    className="bg-red-600 py-2 px-4 mx-auto rounded-lg mt-10"
+                    onClick={handleDeleteComment}
+                >
+                    Delete
+                </button>
             </div>
         </div>
     );
